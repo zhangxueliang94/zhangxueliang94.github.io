@@ -122,5 +122,23 @@ done
 
 ```
 
+### rename.sh 
+```
+#! /bin/sh
+microservice(){
+caldate=`date +%Y%m%d`
+name="cwx"
+file="yxqn-$name-1.0-SNAPSHOT.jar"
+dir="/data/yxqn/$name"
+cd $dir
+mv $file $file\.$caldate
+ls bak || mkdir bak
+mv $file\.$caldate bak
+}
+ microservice
+
+
+```
+
 
 
